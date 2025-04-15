@@ -15,7 +15,7 @@ import {
   Repeat,
   Timer,
 } from "lucide-react";
-import { CHROME_EXTENSION_LINK } from "./lib/constants";
+import { CHROME_EXTENSION_LINK, VIDEO_SOLN_CHROME_EXTENSION_LINK } from "./lib/constants";
 // import a from "next/a"
 
 export default function Home() {
@@ -416,7 +416,7 @@ export default function Home() {
                         variant="default"
                         className="bg-purple-600 hover:bg-purple-700"
                         onClick={() =>
-                          window.open(CHROME_EXTENSION_LINK, "_blank")
+                          window.open(VIDEO_SOLN_CHROME_EXTENSION_LINK, "_blank")
                         }
                       >
                         <Chrome className="mr-2 h-4 w-4" />
