@@ -72,13 +72,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <img
-                  src="/demo_image.jpg"
-                  alt="Hero Image"
-                  width={400}
-                  height={400}
-                  className="aspect-[4/3] object-cover rounded-xl border shadow-md"
-                />
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  preload="auto"
+                  className="background-video"
+                >
+                  <source src="/hero_video.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
