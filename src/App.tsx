@@ -16,9 +16,11 @@ import {
   Timer,
 } from "lucide-react";
 import { CHROME_EXTENSION_LINK, VIDEO_SOLN_CHROME_EXTENSION_LINK } from "./lib/constants";
-// import a from "next/a"
+import { useState } from "react";
 
 export default function Home() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -71,14 +73,24 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="flex items-center justify-center">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
+              <div className="flex items-center justify-center relative">
+                {!isVideoLoaded && (
+                  <img
+                    src="/hero_image.jpg"
+                    alt="Video Placeholder"
+                    className="absolute inset-0 w-full h-full object-cover blur-md"
+                  />
+                )}
+                <video
+                  autoPlay
+                  loop
+                  muted
                   playsInline
                   preload="auto"
-                  className="background-video"
+                  className={`background-video ${
+                    isVideoLoaded ? "opacity-100" : "opacity-0"
+                  } transition-opacity duration-500`}
+                  onCanPlay={() => setIsVideoLoaded(true)}
                 >
                   <source src="/hero_video.mp4" type="video/mp4" />
                 </video>
