@@ -14,6 +14,7 @@ import {
   Code2,
   Repeat,
   Timer,
+  ShieldCheck,
 } from "lucide-react";
 import { CHROME_EXTENSION_LINK, VIDEO_SOLN_CHROME_EXTENSION_LINK } from "./lib/constants";
 import { useState } from "react";
@@ -118,7 +119,7 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
               <Card className="relative overflow-hidden">
                 <div className="absolute top-0 right-0 h-20 w-20">
-                  <div className="absolute transform rotate-45 bg-purple-600 text-center text-white font-medium py-1 right-[-40px] top-[32px] w-[170px]">
+                  <div className="absolute transform rotate-45 bg-purple-600 text-center text-white font-medium py-1 right-[-50px] top-[28px] w-[170px]">
                     Step 1
                   </div>
                 </div>
@@ -140,14 +141,14 @@ export default function Home() {
               </Card>
               <Card className="relative overflow-hidden">
                 <div className="absolute top-0 right-0 h-20 w-20">
-                  <div className="absolute transform rotate-45 bg-purple-600 text-center text-white font-medium py-1 right-[-40px] top-[32px] w-[170px]">
+                  <div className="absolute transform rotate-45 bg-purple-600 text-center text-white font-medium py-1 right-[-50px] top-[28px] w-[170px]">
                     Step 2
                   </div>
                 </div>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Timer className="h-5 w-5 text-purple-600" />
-                    Wait 4 Days
+                    Wait for Your Set Interval
                   </CardTitle>
                   <CardDescription>
                     Let your brain process the information
@@ -155,14 +156,13 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    The extension will automatically remind you after 4 days to
-                    try solving it again — this time without help.
+                  The extension will automatically remind you after your chosen interval to try solving it again — this time without help.
                   </p>
                 </CardContent>
               </Card>
               <Card className="relative overflow-hidden">
                 <div className="absolute top-0 right-0 h-20 w-20">
-                  <div className="absolute transform rotate-45 bg-purple-600 text-center text-white font-medium py-1 right-[-40px] top-[32px] w-[170px]">
+                  <div className="absolute transform rotate-45 bg-purple-600 text-center text-white font-medium py-1 right-[-50px] top-[28px] w-[170px]">
                     Step 3
                   </div>
                 </div>
@@ -235,7 +235,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-start gap-2">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 text-purple-600 dark:bg-purple-800/30">
-                  <Brain className="h-6 w-6" />
+                  <ShieldCheck className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-bold">Privacy First</h3>
                 <p className="text-gray-500 dark:text-gray-400">
